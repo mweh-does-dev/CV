@@ -21,8 +21,8 @@ body {
     padding: 0;
     display: flex;
     justify-content: right;
-    flex-wrap: wrap;
-}
+    /* flex-wrap: wrap;
+} */
 
 .menu ul  { 
     display: flex;
