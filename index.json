@@ -27,12 +27,14 @@
   "education":[
         {
         "title": "Web development 1",
-        "year": "2021-2021"
+        "year": "2021-2021",
+        "description": []
         },
 
        { 
         "title": "Digital creation 1",
-        "year": "2021-2021"
+        "year": "2021-2021",
+        "description": []
             },
 
         {
@@ -53,7 +55,8 @@
 
         {
    "title": "Wendelsbergs Folk High School",
-   "year": "2015-2017"
+   "year": "2015-2017",
+   "description": []
         },
     
         {

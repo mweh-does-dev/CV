@@ -4,7 +4,7 @@ fetch("./index.json")
     // koppla ihop json med js
 
 
-    const workexperience = document.querySelector(".ul-cv");
+    const workexperience = document.querySelector("#workexperience");
     for (let experience of obj.workexperience){
         console.log(experience);
 
@@ -31,22 +31,20 @@ fetch("./index.json")
 
 
 
-    const education = document.querySelector(".ul-cv");
-    for (let education of obj.education){
+    const education = document.querySelector("#education");
+
+    for (let educationCv of obj.education){
         console.log(education);
 
         const titleElement = document.createElement("li");
-        titleElement.innerHTML = "<strong>" + education.title + "</strong>" + "&nbsp; " + education.year;
+        titleElement.innerHTML = "<strong>" + educationCv.title + "</strong>" + "&nbsp; " + educationCv.year;
         education.append(titleElement);
 //loop för education
-
-       for (let description of obj.description){
-        const descriptionElement = document.createElement("li");
-        descriptionElement.innerHTML = description;
-        description.append(description.Element);
-
-        console.log(description);
-        console.log(education.description);
+       for (let description of educationCv.description){
+        
+         const descriptionElement = document.createElement("li");
+         descriptionElement.innerHTML = description;
+            education.append(descriptionElement);
 
        }
 //loop för description
