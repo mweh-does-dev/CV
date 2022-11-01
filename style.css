@@ -3,8 +3,32 @@
     margin:0;
     padding:0;
 }
+
+/* rgb(255, 255, 255); 
+rgb(248, 232, 225); */
+
+:root{
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(255, 255, 255);
+    --black-color: black;
+    --beige-color : rgb(220, 199, 190); 
+}
+
+
+.dark-theme{
+    --primary-color:  rgb(220, 199, 190);
+    --secondary-color: rgb(19, 19, 19);
+    --black-color: rgb(220, 199, 190); 
+    --beige-color:  rgb(19, 19, 19);
+
+
+}
+/* 
+background: var(--primary-color);
+background: var(--secondary-color); */
+
 body {
-    background-color:  rgb(236, 234, 234);
+    background: var(--secondary-color);
     font-family: 'montserrat';
    }
 
@@ -12,7 +36,7 @@ body {
 
 .menu{
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-color);
     background-blend-mode: darken;
     text-decoration: none; 
     letter-spacing: 0.1em;
@@ -30,7 +54,7 @@ body {
     list-style: none;
     padding:0 30px;
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 
@@ -41,7 +65,7 @@ body {
     text-transform:uppercase;
     font-size: 15px;
     text-decoration: none;
-    color:rgb(255, 255, 255);
+    color: black;
     text-decoration: none;
     display: inline-block;
     margin-right: 30px;
@@ -52,14 +76,14 @@ body {
 
 nav ul .li-menu a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-    background:#ffffff;
-    color: rgb(0, 0, 0);
+    background: var(--beige-color);
+    color: var(--black-color);
 }
 
 nav ul .li-menu a.active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-    background:#ffffff;
-    color: rgba(0, 0, 0, 0.7);
+    background: var(--beige-color);
+    color: var(--primary-color);
    
   }
 
@@ -77,7 +101,7 @@ nav ul .li-menu a.active {
 }
     
 .maindiv{
-    background:  rgb(236, 234, 234);
+   
     margin: 0.5em;
     align-items:center;
     display: flex;
@@ -91,16 +115,17 @@ nav ul .li-menu a.active {
     letter-spacing: 5px;
     font-size: 30px;
     border-bottom: 1px solid black;
+    color: var(--black-color);
         
 }
        
 .button-main {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black-color);
     border-radius: 2em;
     text-decoration: none;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding:0.5em;
-    color: beige;
+    color: var( --beige-color);
     margin-top: 1em;
     
 }
@@ -109,6 +134,7 @@ p {
     font-family: 'montserrat';
     margin-top: 5px;
     text-align: center;
+    color:var(--black-color)
 }
 .main-section-pic{
         width: 70%;
@@ -151,16 +177,16 @@ p {
 }
 
 .boxblack{
-    background-color: rgb(0, 0, 0);
+    background-color:var(--beige-color);
     width: 15em;
     /* height: 60em; */
-    color: white;
+    color: var(--beige-color);
    order:1;
-    
+   border: 1px solid black;
 }
 
 .boxwhite{
-    background-color: rgb(255, 255, 255);
+    background-color:var(--secondary-color); ;
     border: 1px solid black;
     order:2;
     width: 50%;
@@ -188,6 +214,7 @@ p {
     font-size: 35px;
     text-transform: uppercase;
     padding-top: 20px;
+    color: var(--black-color);
 }
 
 .h2cv{
@@ -197,6 +224,7 @@ p {
     margin-top: 47px;
     font-size: 13px;
     margin-left: 15px;
+    color: var(--black-color);
 }
 
 .h2work{
@@ -204,22 +232,25 @@ p {
     letter-spacing: 2px;
     padding-bottom: 1px;
     margin-left:15px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--black-color);
     margin-top: 15px;
+    color: var(--black-color);
 
 }
 
 .p-title{
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--black-color);
     margin: 0 3em 2em 3em;
     font-family: 'montserrat';
     padding-bottom:7px;
+    color: var(--black-color);
 
 }
 .pcv{
     margin: 0 10px 20px 10px; 
     font-family: 'montserrat';
     font-size: 14px;
+    color: var(--primary-color);
 }
 
 .hobbies-icon-box {
@@ -242,7 +273,7 @@ p {
 .contact-icon{
     margin: 0;
     height:25px;
-    margin-left: 5px;   
+    margin-left: 108px;   
 }
 
 
@@ -250,6 +281,7 @@ p {
     font-family: 'montserrat';
     letter-spacing: 1px;
     font-size: 13px; 
+    color: var(--primary-color)
 }
 
 .social-icons{
@@ -258,7 +290,7 @@ p {
     justify-content: center;
     justify-content: space-around;
     height: 60px;
-    background-color: rgb(0, 0, 0);  
+    
 }
 
 .social-img{
@@ -271,6 +303,7 @@ li{
     font-size: 13px;
     list-style: none;
     margin-top: 5px;
+    color:var(--black-color)
 }
 
 .ul-cv{
@@ -287,6 +320,10 @@ li{
     flex-direction: column;
     justify-content: flex-start;
     
+}
+
+.p-cv-about{
+    color: var(--primary-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -310,7 +347,7 @@ li{
     border: 1px solid black;
     width: 50em;
     margin-top: 2em;
-    box-shadow: 5px 10px 18px grey;
+    /* box-shadow: 5px 10px 18px grey; */
      display:flex;
      flex-direction: row;
      align-items: center;
@@ -372,9 +409,10 @@ li{
     flex-direction: row;   
     justify-content: space-evenly;
     text-align: center;
+    margin-top: 15px;
 }
 
-.card-1, .card-2, .card-3{
+.card-1, .card-2, .card-3, .card-4{
     width: 250px;
     margin: 5px;
     padding: 5px;
@@ -392,20 +430,21 @@ li{
 .project-h2{
     margin-top: 20px;
     text-align: center;
+    color: var(--black-color)
 }
 
 .project-p{
     padding: 10px;
-    height: 200px;
+    height: 170px;
 }
 
 
 .button-portfolio{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black-color);
     border-radius: 2em;
     text-decoration: none;
     padding:0.5em;
-    color: rgb(255, 255, 255);
+    color: var(--beige-color);
     text-align: center;
   
 }
@@ -417,8 +456,25 @@ li{
         height:100%;
         }
 
-    .card-1, .card-2, .card-3{
+    .card-1, .card-2, .card-3, .card-4{
         padding-bottom:20px ;
         
     }
+}
+
+
+
+
+#icon{
+    padding-right: 20px;
+    height: 28px;
+    width: 44px;
+    cursor: pointer;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
 }

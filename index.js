@@ -1,60 +1,34 @@
-fetch("./index.json")
-.then((res) => res.json())
-.then((obj) => {console.log(obj)
-    // koppla ihop json med js
+
+var icon = document.getElementById("icon");
+
+if(localStorage.getItem("theme") == null){
+    localStorage.setItem("theme", "light");
+}
 
 
-    const workexperience = document.querySelector("#workexperience");
-    for (let experience of obj.workexperience){
-        console.log(experience);
+let localData = localStorage.getItem("theme");
 
-        const titleElement = document.createElement("li");
-        titleElement.innerHTML = "<strong>" + experience.title + "</strong>" + "&nbsp; " + experience.year;
-        workexperience.append(titleElement);
-//loop för workexxperience
+if(localData == "light"){
+    icon.src = "img/moon.png";
+    document.body.classList.remove("dark-theme");
+}
+else if(localData == "dark"){ 
+    icon.src = "img/sun.png";
+    document.body.classList.add("dark-theme");
+}
 
-       for (let description of experience.description){
-        const descriptionElement = document.createElement("li");
-        descriptionElement.innerHTML = description;
-        workexperience.append(descriptionElement);
-        console.log(description);
-        console.log(experience.description);
 
-       }
-//loop för description
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+    icon.src = "img/sun.png";
+    localStorage.setItem("theme", "dark");
+    }else{
+    icon.src = "img/moon.png";
+    localStorage.setItem("theme", "light");
     }
- 
 
-
-
-
-
-
-
-    const education = document.querySelector("#education");
-
-    for (let educationCv of obj.education){
-        console.log(education);
-
-        const titleElement = document.createElement("li");
-        titleElement.innerHTML = "<strong>" + educationCv.title + "</strong>" + "&nbsp; " + educationCv.year;
-        education.append(titleElement);
-//loop för education
-       for (let description of educationCv.description){
-        
-         const descriptionElement = document.createElement("li");
-         descriptionElement.innerHTML = description;
-            education.append(descriptionElement);
-
-       }
-//loop för description
-    }
- 
-    
-
-});
-
-
+}
 
 
 
